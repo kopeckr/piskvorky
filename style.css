@@ -27,22 +27,27 @@ p {
   line-height: 1.5;
 }
 
-.uvodni {
+.uvodni-fotka {
   width: 380px;
   display: inline-block;
 }
 
-.zacit-hrat {
-  background: #1fcca4;
-  height: 40px;
-  width: 380px;
-  padding: 0;
-  padding-top: 20px;
-  text-align: center;
+/* tlačítka */
+
+.buttons li {
+  display: inline-block;
 }
 
 .pravidla {
   background: #0197f6;
+  height: 40px;
+  width: 380px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.zacit-hrat {
+  background: #1fcca4;
   height: 40px;
   width: 380px;
   padding: 0;
@@ -56,16 +61,12 @@ a {
   text-decoration: none;
 }
 
-.buttons li {
-  display: inline-block;
-}
-
-.pravidla a:hover {
-  background-color: #1cbb96;
+.pravidla:hover {
+  background-color: #0090e9;
   color: white;
 }
 
-.zacit-hrat a:hover {
-  background-color: #0090e9;
+.zacit-hrat:hover {
+  background-color: #1cbb96;
   color: white;
 }
