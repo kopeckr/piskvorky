@@ -30,3 +30,26 @@ p {
 .uvodni {
   width: 380px;
 }
+
+.zacit-hrat {
+  background: #1fcca4;
+  height: 40px;
+  width: 380px;
+  padding: 0;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.pravidla {
+  background: #0197f6;
+  height: 40px;
+  width: 380px;
+  padding: 0;
+  padding-top: 20px;
+  text-align: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
