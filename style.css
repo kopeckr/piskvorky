@@ -29,6 +29,7 @@ p {
 
 .uvodni {
   width: 380px;
+  display: inline-block;
 }
 
 .zacit-hrat {
@@ -50,6 +51,21 @@ p {
 }
 
 a {
+  display: inline-block;
   color: white;
   text-decoration: none;
+}
+
+.buttons li {
+  display: inline-block;
+}
+
+.pravidla a:hover {
+  background-color: #1cbb96;
+  color: white;
+}
+
+.zacit-hrat a:hover {
+  background-color: #0090e9;
+  color: white;
 }
