@@ -1,6 +1,8 @@
 body {
   background-image: linear-gradient(#615dad, #ffc8da);
   font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 300px;
+  padding-left: 25%;
 }
 
 .hra {
@@ -43,7 +45,6 @@ p {
 
 .buttons li {
   display: inline-block;
-  display: flex;
   justify-content: center;
 }
 
@@ -53,10 +54,6 @@ p {
   width: 380px;
   text-align: center;
   padding-top: 20px;
-  position: absolute;
-  bottom: 90px;
-  left: 8px;
-  margin-left: 0;
 }
 
 .zacit-hrat {
@@ -66,10 +63,6 @@ p {
   padding: 0;
   padding-top: 20px;
   text-align: center;
-  position: absolute;
-  bottom: 30px;
-  left: 8px;
-  margin-left: 0;
 }
 
 a {
@@ -86,4 +79,8 @@ a {
 .zacit-hrat:hover {
   background-color: #1cbb96;
   color: white;
+}
+
+ul {
+  padding-left: 0;
 }
