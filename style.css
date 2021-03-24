@@ -8,6 +8,8 @@ body {
   background-repeat: no-repeat;
 }
 
+/* Proč po smazání justify content je to stále uprostřed? */
+
 /* background-size: cover; - tip od Danči*/
 
 .hra {
@@ -73,8 +75,7 @@ li {
   color: white;
   text-decoration: none;
   display: flex;
-  padding: 18px 150px;
-  padding-right: 162px;
+  padding: 18px 156px;
 }
 
 a {
