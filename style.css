@@ -51,9 +51,8 @@ p {
 
 /* tlačítka */
 
-li {
-  display: inline-block;
-  text-align: center;
+.pravidla .zacithrat li {
+  display: flex;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15),
     0 6px 25px 0 rgba(223, 177, 234, 0.19);
 }
@@ -96,3 +95,5 @@ a {
 ul {
   padding-left: 0;
 }
+
+/* -----------------------------PRAVIDLA  ---------------------------------- */
