@@ -8,8 +8,6 @@ body {
   background-repeat: no-repeat;
 }
 
-/* background-size: cover; - tip od Danči*/
-
 .hra {
   display: flex;
   flex-direction: column;
@@ -80,6 +78,8 @@ h1 {
 .circle,
 .cross {
   filter: invert(100%);
+  height: 1em;
+  width: 1em;
 }
 
 .rules {
@@ -88,28 +88,41 @@ h1 {
   display: flex;
   flex-direction: column;
   width: 380px;
-  padding: 20px;
   margin: 0;
-  line-height: 1.5;
+  padding: 0;
+  line-height: 1.3;
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
 }
 
-.pravidlaSign {
-  padding-top: 10px;
+li {
+  margin: 7px 42px 7px 82px;
+}
+
+.posledni-pravidlo {
+  padding-bottom: 25px;
+}
+
+.piskvorkyTahy {
+  width: 288px;
+  margin-top: 20px;
+}
+
+p {
+  padding-left: 38px;
+  padding-right: 38px;
+  margin-top: 10px;
+}
+
+.posledni-popisek {
+  padding-bottom: 45px;
 }
 
 .popisKPskv {
   background: #283e50;
   color: white;
   font-style: italic;
+  line-height: 1.3;
+  text-align: center;
   width: 380px;
-  margin: 0;
-  line-height: 1.5;
-}
-
-.piskvorkyTahy {
-  width: 288px;
-  margin-left: 30px;
-  margin-bottom: 8px;
 }
