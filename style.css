@@ -6,6 +6,7 @@ body {
   display: flex;
   justify-content: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* .blue přidáno je z 2. úkolu */
@@ -117,7 +118,7 @@ li {
   margin-bottom: -16px;
 }
 
-.popisKPskv {
+.piskvorky-ukazka {
   background: #283e50;
   color: white;
   font-style: italic;
@@ -142,4 +143,47 @@ li {
 .uvodni-stranka a:hover {
   background-color: #1cbb96;
   color: white;
+}
+
+/* responzivita */
+
+@media (min-width: 650px) {
+  .uvodni-fotka {
+    width: 640px;
+  }
+
+  .piskvorky-ukazka {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .modry,
+  .blue,
+  .rules,
+  .piskvorky-ukazka {
+    width: 640px;
+  }
+
+  a {
+    text-align: center;
+  }
+
+  /* .uvodni-fotka {
+    max-width: 60%;
+  }
+
+  .modry {
+    max-width: 60%;
+    max-height: 60%;
+  } */
+
+  /* .pravidla a {
+    display: flex;
+    flex: 0 1 50%;
+  }
+
+  .zacit-hrat a {
+    display: flex;
+    max-width: 60%;
+  } */
 }
