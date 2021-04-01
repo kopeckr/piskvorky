@@ -157,6 +157,15 @@ li {
     flex-wrap: wrap;
   }
 
+  figure {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  figcaption {
+    width: 300px;
+  }
+
   .modry,
   .blue,
   .rules,
@@ -167,23 +176,4 @@ li {
   a {
     text-align: center;
   }
-
-  /* .uvodni-fotka {
-    max-width: 60%;
-  }
-
-  .modry {
-    max-width: 60%;
-    max-height: 60%;
-  } */
-
-  /* .pravidla a {
-    display: flex;
-    flex: 0 1 50%;
-  }
-
-  .zacit-hrat a {
-    display: flex;
-    max-width: 60%;
-  } */
 }
