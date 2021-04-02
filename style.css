@@ -180,14 +180,16 @@ li {
   .piskvorky-ukazka {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 
   figure {
-    margin: 5px 10px;
+    margin: 5px 0;
   }
 
   figcaption {
     width: 300px;
+    font-size: 15px;
   }
 
   /* .modry-kontejner,  ------- změna i u 1. obrazovky */
