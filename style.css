@@ -1,17 +1,21 @@
+html {
+  min-height: 100%;
+}
+
 body {
   background-image: linear-gradient(#615dad, #ffc8da);
   font-family: Arial, Helvetica, sans-serif;
-  padding-top: 50px;
-  padding-bottom: 200px;
+  padding-top: 10px;
+  padding-bottom: 70px;
   display: flex;
   justify-content: center;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
-/* .blue přidáno je z 2. úkolu */
+/* --------------- Úvodní stránka ------------------ */
+/* .pravidla-modry přidáno z 2. úkolu */
 .hra,
-.blue {
+.pravidla-modry {
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 25px 0 rgba(0, 0, 0, 0.19);
@@ -23,7 +27,7 @@ body {
   border-top-right-radius: 7px;
 }
 
-.modry {
+.modry-kontejner {
   background: #283e50;
   color: white;
   height: 330px;
@@ -40,7 +44,7 @@ h1 {
   margin: 0;
 }
 
-.popisHry {
+.popis-hry {
   text-align: center;
   padding: 20px;
   margin: 0;
@@ -49,43 +53,45 @@ h1 {
 
 /* ---------tlačítka----------- */
 
-.pravidla a {
+.tlacitko-pravidla a {
   display: block;
   background: #1fcca4;
   color: white;
   text-decoration: none;
-  padding: 18px 161px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  text-align: center;
   border-bottom: 1px solid #283e50;
 }
 
-.zacit-hrat a {
+.tlacitko-zacit-hrat a {
   display: block;
   background: #0197f6;
   color: white;
   text-decoration: none;
-  padding: 18px 156px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  text-align: center;
 }
 
-.pravidla a:hover {
+.tlacitko-pravidla a:hover {
   background-color: #1cbb96;
-  color: white;
 }
 
-.zacit-hrat a:hover {
+.tlacitko-zacit-hrat a:hover {
   background-color: #0090e9;
-  color: white;
 }
 
 /* --------------PRAVIDLA  úkol č. 2 ---------------------------------- */
 
-.circle,
-.cross {
+.kolecko,
+.krizek {
   filter: invert(100%);
   height: 1em;
   width: 1em;
 }
 
-.rules {
+.pravidla-seznam {
   background: #283e50;
   color: white;
   display: flex;
@@ -107,7 +113,7 @@ li {
   padding-bottom: 25px;
 }
 
-.piskvorkyTahy {
+.piskvorky-tahy {
   width: 288px;
   margin-top: 20px;
 }
@@ -129,7 +135,7 @@ li {
 
 /* -----------tlačítko Uvodní-stránka--------------- */
 
-.uvodni-stranka a {
+.tlacitko-uvodni-stranka a {
   display: block;
   background: #1fcca4;
   color: white;
@@ -140,17 +146,48 @@ li {
   border-bottom: 1px solid #283e50;
 }
 
-.uvodni-stranka a:hover {
+.tlacitko-uvodni-stranka a:hover {
   background-color: #1cbb96;
-  color: white;
 }
 
-/* responzivita */
+/* ----------- responzivita -------------- */
+@media (max-width: 414px) {
+  .hra,
+  .uvodni-fotka,
+  .modry-kontejner,
+  .pravidla-seznam,
+  .piskvorky-ukazka {
+    width: 300px;
+  }
+
+  .tlacitko-pravidla,
+  .tlacitko-uvodni-stranka,
+  .tlacitko-zacit-hrat {
+    width: 300px;
+  }
+
+  .piskvorky-tahy {
+    width: 250px;
+  }
+
+  figure {
+    margin: 10px 15px;
+  }
+
+  li {
+    margin-left: 42px;
+    margin-right: 22px;
+  }
+
+  a {
+    text-align: center;
+  }
+}
 
 @media (min-width: 650px) {
-  .uvodni-fotka {
+  /* .uvodni-fotka {
     width: 640px;
-  }
+  }   --------------- změna i u 1. obrazovky*/
 
   .piskvorky-ukazka {
     display: flex;
@@ -158,17 +195,16 @@ li {
   }
 
   figure {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 5px 10px;
   }
 
   figcaption {
     width: 300px;
   }
 
-  .modry,
-  .blue,
-  .rules,
+  /* .modry-kontejner,  --------------- změna i u 1. obrazovky */
+  .pravidla-modry,
+  .pravidla-seznam,
   .piskvorky-ukazka {
     width: 640px;
   }
