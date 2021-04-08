@@ -203,12 +203,21 @@ li {
 
 /* --------------- 3. úkol - Hra ----------------- */
 
+.kontejner-hra {
+  max-width: 80vmin;
+}
+
 .hraje {
   color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 23px;
 }
 
 .domecek {
   background: #1fcca4;
+  padding: 8px;
+  border-radius: 4px;
 }
 
 .domecek:hover {
@@ -217,8 +226,16 @@ li {
 
 .restart {
   background: #0197f6;
+  padding: 8px;
+  border-radius: 4px;
 }
 
 .restart:hover {
   background-color: #0090e9;
+}
+
+.hraje-a-tlacitka {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
