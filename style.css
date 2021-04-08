@@ -206,3 +206,19 @@ li {
 .hraje {
   color: white;
 }
+
+.domecek {
+  background: #1fcca4;
+}
+
+.domecek:hover {
+  background-color: #1cbb96;
+}
+
+.restart {
+  background: #0197f6;
+}
+
+.restart:hover {
+  background-color: #0090e9;
+}
