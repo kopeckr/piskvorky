@@ -250,8 +250,20 @@ li {
 .mrizka {
   background-color: rgba(255, 255, 255, 0.26);
   border: 2px solid #283e50;
-  padding: 27.7px;
+  padding: 0;
+  min-width: 25.5px;
+  min-height: 25.5px;
   margin: 0;
+
+  /* padding: 10px; */
+  /* padding: 11.7px; */
+  /* padding: 18px; */
+  /* padding: 26.8px; */
+  display: flex;
+  flex-basis: auto;
+  flex-grow: 1;
+
+  /* flex: 0 0 10%; */
 }
 
 button:nth-child(1n + 0) {
@@ -274,4 +286,24 @@ button:nth-child(1n + 0) {
 
 button:hover {
   background-color: rgba(255, 255, 255, 0.483);
+}
+
+@media (min-width: 320px) {
+  .kontejner-hra {
+    width: 85%;
+  }
+
+  .mrizka {
+    width: 10%;
+    padding-top: 10%;
+    padding-left: 8%;
+  }
+}
+
+@media (min-width: 640px) {
+  .mrizka {
+    width: 10%;
+    padding-top: 10%;
+    padding-left: 8%;
+  }
 }
