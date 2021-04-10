@@ -68,6 +68,10 @@ h1 {
   background-color: #1cbb96;
 }
 
+.zelene-tlacitko:focus {
+  outline: none;
+}
+
 .modre-tlacitko a {
   display: block;
   background: #0197f6;
@@ -80,6 +84,10 @@ h1 {
 
 .modre-tlacitko a:hover {
   background-color: #0090e9;
+}
+
+.modre-tlacitko:focus {
+  outline: none;
 }
 
 /* --------------PRAVIDLA  úkol č. 2 ---------------------------------- */
@@ -286,6 +294,10 @@ button:nth-child(1n + 0) {
 
 button:hover {
   background-color: rgba(255, 255, 255, 0.483);
+}
+
+button:focus {
+  outline: none;
 }
 
 @media (min-width: 320px) {
