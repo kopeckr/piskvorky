@@ -142,6 +142,64 @@ li {
   width: 380px;
 }
 
+/* --------------- 3. úkol - Hra ----------------- */
+
+.hraje {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.domecek {
+  background: #1fcca4;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.domecek:hover {
+  background-color: #1cbb96;
+}
+
+.restart {
+  background: #0197f6;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.restart:hover {
+  background-color: #0090e9;
+}
+
+.hraje-a-tlacitka {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ------------- hrací pole --------------- */
+
+.hraci-pole {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #283e50;
+  width: 80vmin;
+  height: 80vmin;
+}
+
+.mrizka {
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.26);
+  border: 1px solid #283e50;
+  padding: 0;
+  margin: 0;
+  flex: 0 0 10%;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.483);
+}
+
 /* ----------- responzivita Iphone SE -------------- */
 
 @media (max-width: 414px) {
@@ -206,116 +264,5 @@ li {
 
   a {
     text-align: center;
-  }
-}
-
-/* --------------- 3. úkol - Hra ----------------- */
-
-.kontejner-hra {
-  max-width: 80vmin;
-}
-
-.hraje {
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 23px;
-}
-
-.domecek {
-  background: #1fcca4;
-  padding: 8px;
-  border-radius: 4px;
-}
-
-.domecek:hover {
-  background-color: #1cbb96;
-}
-
-.restart {
-  background: #0197f6;
-  padding: 8px;
-  border-radius: 4px;
-}
-
-.restart:hover {
-  background-color: #0090e9;
-}
-
-.hraje-a-tlacitka {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* ------------- hrací pole --------------- */
-
-.hraci-pole {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.mrizka {
-  background-color: rgba(255, 255, 255, 0.26);
-  border: 2px solid #283e50;
-  padding: 0;
-  min-width: 25.5px;
-  min-height: 25.5px;
-  margin: 0;
-
-  /* padding: 10px; */
-  /* padding: 11.7px; */
-  /* padding: 18px; */
-  /* padding: 26.8px; */
-  display: flex;
-  flex-basis: auto;
-  flex-grow: 1;
-
-  /* flex: 0 0 10%; */
-}
-
-button:nth-child(1n + 0) {
-  border-right: 0;
-  border-bottom: 0;
-}
-
-#posledni-rada {
-  border-bottom: 2px solid #283e50;
-}
-
-#posledni-sloupec {
-  border-right: 2px solid #283e50;
-}
-
-#posledni-ctverecek {
-  border-bottom: 2px solid #283e50;
-  border-right: 2px solid #283e50;
-}
-
-button:hover {
-  background-color: rgba(255, 255, 255, 0.483);
-}
-
-button:focus {
-  outline: none;
-}
-
-@media (min-width: 320px) {
-  .kontejner-hra {
-    width: 85%;
-  }
-
-  .mrizka {
-    width: 10%;
-    padding-top: 10%;
-    padding-left: 8%;
-  }
-}
-
-@media (min-width: 640px) {
-  .mrizka {
-    width: 10%;
-    padding-top: 10%;
-    padding-left: 8%;
   }
 }
