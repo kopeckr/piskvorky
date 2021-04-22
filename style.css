@@ -187,16 +187,17 @@ li {
   height: 80vmin;
 }
 
-.mrizka {
+.policko {
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.26);
   border: 1px solid #283e50;
-
-  /* calc(80vmin/10) */
-
   padding: 0;
   margin: 0;
   flex: 0 0 10%;
+}
+
+.policko:nth-child(10n) {
+  flex-grow: 1;
 }
 
 button:hover,
@@ -204,20 +205,33 @@ button:focus {
   background-color: rgba(255, 255, 255, 0.483);
   cursor: pointer;
 }
-/* .................... */
+/* ------------ tridy pro JS --------------- */
 
-.board__field––circle {
+.policko__kolecko {
   background-image: url(img/circle.svg);
   background-repeat: no-repeat;
   background-size: 5.5vmin;
   background-position: center;
+  animation-duration: 0.15s;
+  animation-name: zvetseni;
 }
 
-.board__field––cross {
+.policko__krizek {
   background-image: url(img/cross.svg);
   background-repeat: no-repeat;
   background-size: 5.5vmin;
   background-position: center;
+  animation-duration: 0.15s;
+  animation-name: zvetseni;
+}
+
+@keyframes zvetseni {
+  from {
+    background-size: 10%;
+  }
+  to {
+    background-size: 70%;
+  }
 }
 
 /* ----------- responzivita Iphone SE -------------- */
