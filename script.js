@@ -1,25 +1,116 @@
 'use strict';
-console.log('funguju');
 
 let naTahu = 'kolecko';
 
 let hraje = document.querySelector('.kolecko');
 
-const tah = (event) => {
-  if (naTahu === 'kolecko') {
-    event.target.classList.add('policko__kolecko');
-    naTahu = 'krizek';
-    hraje.src = 'img/cross.svg';
-  } else {
-    event.target.classList.add('policko__krizek');
-    naTahu = 'kolecko';
-    hraje.src = 'img/circle.svg';
+document.querySelectorAll('.policko').forEach((field) => {
+  field.addEventListener('click', () => {
+    if (naTahu === 'kolecko') {
+      field.classList.add('policko__kolecko');
+      naTahu = 'krizek';
+      hraje.src = 'img/cross.svg';
+    } else {
+      field.classList.add('policko__krizek');
+      naTahu = 'kolecko';
+      hraje.src = 'img/circle.svg';
+    }
+
+    const pozice = getPosition(field);
+    const policko = getField(pozice.row, pozice.column);
+
+    if (isWinningMove(policko) === true) {
+      setTimeout(function () {
+        let result;
+        if (getSymbol(policko) === 'kolecko') {
+          alert('Vyhrálo kolečko.');
+          if (result === true) {
+            location.reload();
+          }
+        } else {
+          alert('Vyhrál křížek.');
+          if (result === true) {
+            location.reload();
+          }
+        }
+      }, 400);
+    }
+  });
+});
+
+//================ Připravené funkce ===================
+
+const getSymbol = (field) => {
+  if (field.classList.contains('policko__krizek')) {
+    return 'krizek';
+  } else if (field.classList.contains('policko__kolecko')) {
+    return 'kolecko';
   }
-  event.target.removeEventListener('click', tah);
-  event.target.disabled = true;
 };
 
-let btnElm = document.querySelectorAll('#policko-id');
-for (let i = 0; i < btnElm.length; i += 1) {
-  btnElm[i].addEventListener('click', tah);
-}
+const boardSize = 10;
+const fields = document.querySelectorAll('.policko');
+
+const getField = (row, column) => fields[row * boardSize + column];
+
+const getPosition = (field) => {
+  let fieldIndex = 0;
+  while (fieldIndex < fields.length && field !== fields[fieldIndex]) {
+    fieldIndex++;
+  }
+  return {
+    row: Math.floor(fieldIndex / boardSize),
+    column: fieldIndex % boardSize,
+  };
+};
+
+const symbolsToWin = 5;
+const isWinningMove = (field) => {
+  const origin = getPosition(field);
+  const symbol = getSymbol(field);
+
+  let i;
+
+  let inRow = 1; // Jednička pro právě vybrané políčko
+  // Koukni doleva
+  i = origin.column;
+  while (i > 0 && symbol === getSymbol(getField(origin.row, i - 1))) {
+    inRow++;
+    i--;
+  }
+
+  // Koukni doprava
+  i = origin.column;
+  while (
+    i < boardSize - 1 &&
+    symbol === getSymbol(getField(origin.row, i + 1))
+  ) {
+    inRow++;
+    i++;
+  }
+  if (inRow >= symbolsToWin) {
+    return true;
+  }
+
+  let inColumn = 1;
+  // Koukni nahoru
+  i = origin.row;
+  while (i > 0 && symbol === getSymbol(getField(i - 1, origin.column))) {
+    inColumn++;
+    i--;
+  }
+
+  // Koukni dolu
+  i = origin.row;
+  while (
+    i < boardSize - 1 &&
+    symbol === getSymbol(getField(i + 1, origin.column))
+  ) {
+    inColumn++;
+    i++;
+  }
+  if (inColumn >= symbolsToWin) {
+    return true;
+  }
+  return false;
+};
