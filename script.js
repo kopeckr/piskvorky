@@ -64,14 +64,79 @@ const getPosition = (field) => {
   };
 };
 
+//pravidla pro výhru
 const symbolsToWin = 5;
 const isWinningMove = (field) => {
   const origin = getPosition(field);
   const symbol = getSymbol(field);
 
   let i;
+  let c;
 
   let inRow = 1; // Jednička pro právě vybrané políčko
+  let inDiag = 1;
+  let inDiag2 = 1;
+
+  //Diagonálně doleva nahoru
+  i = origin.row;
+  c = origin.column;
+  while (i > 0 && c > 0 && symbol === getSymbol(getField(i - 1, c - 1))) {
+    inDiag++;
+    i--;
+    c--;
+  }
+  if (inDiag >= symbolsToWin) {
+    return true;
+  }
+
+  //Diagonálně doprava nahoru
+  c = origin.column;
+  i = origin.row;
+  while (
+    i > 0 &&
+    c < boardSize - 1 &&
+    symbol === getSymbol(getField(i - 1, c + 1))
+  ) {
+    inDiag2++;
+    i--;
+    c++;
+  }
+  if (inDiag2 >= symbolsToWin) {
+    return true;
+  }
+
+  //Diagonálně doleva dolu
+  i = origin.row;
+  c = origin.column;
+  while (
+    i < boardSize - 1 &&
+    c > 0 &&
+    symbol === getSymbol(getField(i + 1, c - 1))
+  ) {
+    inDiag2++;
+    i++;
+    c--;
+  }
+  if (inDiag2 >= symbolsToWin) {
+    return true;
+  }
+
+  //Diagonálně doprava dolu
+  i = origin.row;
+  c = origin.column;
+  while (
+    i < boardSize - 1 &&
+    c < boardSize - 1 &&
+    symbol === getSymbol(getField(i + 1, c + 1))
+  ) {
+    inDiag++;
+    i++;
+    c++;
+  }
+  if (inDiag >= symbolsToWin) {
+    return true;
+  }
+
   // Koukni doleva
   i = origin.column;
   while (i > 0 && symbol === getSymbol(getField(origin.row, i - 1))) {
