@@ -23,12 +23,12 @@ document.querySelectorAll('.policko').forEach((field) => {
       setTimeout(function () {
         let result;
         if (getSymbol(policko) === 'kolecko') {
-          alert('Vyhrálo kolečko.');
+          result = confirm('Vyhrálo kolečko. Spustit novou hru?');
           if (result === true) {
             location.reload();
           }
         } else {
-          alert('Vyhrál křížek.');
+          result = confirm('Vyhrál křížek. Spustit novou hru?');
           if (result === true) {
             location.reload();
           }
